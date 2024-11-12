@@ -92,6 +92,14 @@ body {
 
 .cover {
     background: radial-gradient(circle farthest-corner at 80% 20%, hsl(150 80% 20% / .3) 0%, hsl(170 60% 10% / .1) 100%),
-        hsl(231, 32%, 29%) url("/image/0.jpg") 50% / cover;
+        hsl(231, 32%, 29%) url("/image/0.jpg") center / cover;
     color: hsl(200 30% 98%);
 }
+
+/* Tối ưu cho các màn hình nhỏ (điện thoại di động) */
+@media (max-width: 600px) {
+    .cover {
+        background-size: contain; /* Hình ảnh sẽ vừa với màn hình */
+    }
+}
+
